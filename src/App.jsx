@@ -1,5 +1,6 @@
 import React from "react";
 import arrowIcon from "./assets/images/icon-arrow.svg";
+import AnimatedNumber from "./components/AnimatedNumber";
 
 function App() {
   const [age, setAge] = React.useState({
@@ -104,6 +105,7 @@ function App() {
             className="alert-message text-persimmon italic"
             id="dayError"
             role="alert"
+            aria-live="assertive"
           >
             {errors.day}
           </p>
@@ -137,6 +139,7 @@ function App() {
             className="alert-message text-persimmon italic"
             id="monthError"
             role="alert"
+            aria-live="assertive"
           >
             {errors.month}
           </p>
@@ -170,6 +173,7 @@ function App() {
             className="alert-message text-persimmon italic"
             id="yearError"
             role="alert"
+            aria-live="assertive"
           >
             {errors.year}
           </p>
@@ -189,23 +193,29 @@ function App() {
 
       <div className="output-container d-grid" role="status" aria-live="polite">
         <p className="fs-extra-large extra-bold italic letter-spacing-small">
-          <span className="calculated-age text-electric-violet">
-            {age.calculatedYears}
-          </span>
+          {typeof age.calculatedYears === "number" ? (
+            <AnimatedNumber value={age.calculatedYears} />
+          ) : (
+            <span className="calculated-age text-electric-violet">- -</span>
+          )}
           years
         </p>
 
         <p className="fs-extra-large extra-bold italic letter-spacing-small">
-          <span className="calculated-age text-electric-violet">
-            {age.calculatedMonths}
-          </span>
+          {typeof age.calculatedMonths === "number" ? (
+            <AnimatedNumber value={age.calculatedMonths} />
+          ) : (
+            <span className="calculated-age text-electric-violet">- -</span>
+          )}
           months
         </p>
 
         <p className="fs-extra-large extra-bold italic letter-spacing-small">
-          <span className="calculated-age text-electric-violet">
-            {age.calculatedDays}
-          </span>
+          {typeof age.calculatedDays === "number" ? (
+            <AnimatedNumber value={age.calculatedDays} />
+          ) : (
+            <span className="calculated-age text-electric-violet">- -</span>
+          )}
           days
         </p>
       </div>
