@@ -1,0 +1,124 @@
+::selection {
+    background: hsl(var(--clr-electric-violet));
+    color: hsl(var(--clr-white));
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(var(--clr-gallery));
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--clr-electric-violet));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--clr-electric-violet), .75);
+}
+
+:focus-visible {
+    outline: 2px solid hsl(var(--clr-electric-violet));
+    outline-offset: 1px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: hsl(var(--clr-gallery));
+    color: hsl(var(--clr-black));
+    font-size: var(--fs-small);
+    font-family: var(--ff-poppins);
+}
+
+section {
+    width: clamp(21.438rem, 59vw, 52.5rem);
+    padding: clamp(3.15rem, 5vw, 3.75rem) clamp(1.5rem, 4vw, 3.5rem);
+    border-radius: 1.5rem 1.5rem clamp(6.25rem, 14vw, 12.5rem) 1.5rem;
+}
+
+form {
+    gap: clamp(1rem, 2.3vw, 2rem);
+}
+
+form>div {
+    gap: .65rem;
+}
+
+form>div>input {
+    max-width: clamp(5.479rem, 12vw, 10rem);
+    padding: 1.1rem clamp(1rem, 1.7vw, 1.5rem);
+    border: 1px solid hsl(var(--clr-alto));
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+form>div>input::placeholder {
+    opacity: 50%;
+}
+
+form>div>input:hover,
+form>div>input:focus {
+    border-color: hsl(var(--clr-electric-violet));
+}
+
+.alert-message {
+    min-height: 1.313rem;
+    line-height: 1.2;
+}
+
+.submitBtn-container {
+    position: relative;
+    margin-block: 2.85rem;
+    border-bottom: 1px solid hsl(var(--clr-alto));
+}
+
+.submitBtn-container>button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    width: clamp(4rem, 8vw, 6rem);
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.submitBtn-container>button>img {
+    width: 55%;
+}
+
+.submitBtn-container>button:hover,
+.submitBtn-container>button:focus {
+    background: hsl(var(--clr-black));
+}
+
+@media (max-width: 40rem) {
+    .submitBtn-container>button {
+        right: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.output-container {
+    line-height: 1.1;
+}
+
+.calculated-age {
+    margin-inline-end: clamp(.2rem, .75vw, .65rem);
+}

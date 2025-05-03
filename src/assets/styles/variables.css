@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Italic.ttf);
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Bold.ttf);
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-BoldItalic.ttf);
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-ExtraBold.ttf);
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-ExtraBoldItalic.ttf);
+    font-style: italic;
+    font-weight: 900;
+}
+
+:root {
+    /* colors */
+    --clr-persimmon: 0, 100%, 67%;
+    --clr-electric-violet: 259, 100%, 65%;
+    --clr-black: 0, 0%, 0%;
+    --clr-dove-gray: 0, 1%, 44%;
+    --clr-alto: 0, 0%, 86%;
+    --clr-gallery: 0, 0%, 94%;
+    --clr-white: 0, 100%, 100%;
+
+    /* font families */
+    --ff-poppins: 'Poppins', sans-serif;
+
+    /* font sizes */
+    --fs-extra-large: clamp(3.5rem, 8vw, 6.5rem);
+    --fs-medium: clamp(1.25rem, 3vw, 2rem);
+    --fs-small: clamp(.75rem, 1vw, .875rem);
+}

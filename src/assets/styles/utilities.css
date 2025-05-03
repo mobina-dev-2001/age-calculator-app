@@ -1,0 +1,37 @@
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+}
+
+.d-grid {display: grid;}
+.d-flex {display: flex;}
+
+.flow>*:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.bg-electric-violet {background: hsl(var(--clr-electric-violet));}
+.bg-white {background: hsl(var(--clr-white));}
+
+.text-persimmon {color: hsl(var(--clr-persimmon));}
+.text-electric-violet {color: hsl(var(--clr-electric-violet));}
+.text-dove-gray {color: hsl(var(--clr-dove-gray));}
+
+.fs-extra-large {font-size: var(--fs-extra-large);}
+.fs-medium {font-size: var(--fs-medium);}
+
+.extra-bold {font-weight: 900;}
+.bold {font-weight: 700;}
+
+.uppercase {text-transform: uppercase;}
+.italic {font-style: italic;}
+
+.letter-spacing-large {letter-spacing: 3.5px;}
+.letter-spacing-small {letter-spacing: -2px;}
